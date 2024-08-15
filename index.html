@@ -1,20 +1,96 @@
 <!DOCTYPE html>
 <html>
 
+<head>
+    <style>
+        /* Background and body styles */
+        body {
+            background: linear-gradient(45deg, #ff69b4, #add8e6, #ffb6c1); /* Pastel trans colors */
+            font-family: 'Comic Sans MS', 'Comic Sans', cursive; /* 90s vibe font */
+            color: #0000ff; /* Blue text for high contrast */
+            text-align: center;
+        }
+
+        /* Rainbow text effect */
+        @keyframes rainbow {
+            0% { color: red; }
+            14% { color: orange; }
+            28% { color: yellow; }
+            42% { color: green; }
+            57% { color: blue; }
+            71% { color: indigo; }
+            85% { color: violet; }
+            100% { color: red; }
+        }
+
+        h1 {
+            animation: rainbow 2s infinite; /* Faster animation */
+            font-size: 80px; /* Bigger text */
+            text-shadow: 2px 2px #000000; /* Bold 90s shadow */
+        }
+
+        /* Side-by-side layout */
+        .side-by-side {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .side-by-side img {
+            max-width: 400px; /* Larger GIF */
+            margin-left: 20px;
+            border: 5px solid #ff69b4; /* Pink border */
+        }
+
+        /* SUS files section */
+        .sus-text {
+            font-size: 30px; /* Larger text */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            background-color: #ffb6c1; /* Pink background */
+            padding: 10px;
+            border: 5px dashed #0000ff; /* Blue dashed border */
+            box-shadow: 5px 5px 0px #ff69b4; /* Bold shadow */
+        }
+
+        .sus-text a {
+            margin-left: 10px; /* Space between text and bee icon */
+            font-size: 40px; /* Larger bee icon */
+        }
+
+        /* Other images */
+        img {
+            max-width: 200px; /* Larger image size */
+            margin-top: 20px;
+            border: 5px solid #add8e6; /* Light blue border */
+        }
+
+        embed {
+            border: 5px solid #ff69b4; /* Pink border around embed */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
 <body>
 
+    <div class="side-by-side">
+        <h1>TSUKI'S AWESOME WEBSITE OF AWESOME</h1>
+        <img src="https://tenor.com/view/breaking-bad-saul-goodman-trans-saul-transman-gif-24241045.gif" alt="Saul Goodman GIF">
+    </div>
+
+    <div class="sus-text">
+        I LOVE DOWNLOADING SUS FILES!!!
+        <a href="https://drive.google.com/uc?export=download&id=1MYdfHYlj_4ImHtJMEdVsaEyMoFAUkQxo">🐝</a>
+    </div>
+
     <div>
-<h1>TSUKI'S AWESOME WEBSTIE OF AWESOME</h1>
-<p> </p>
-</div>
-
-<div >
-I LOVE DOWNLOADING SUS FILES!!!
-    <a href="https://drive.google.com/uc?export=download&id=1MYdfHYlj_4ImHtJMEdVsaEyMoFAUkQxo">🐝</a>
-    <img src="https://media.tenor.com/nwJFFWwem-QAAAAM/cat-ok.gif">
-<embed type="text/html" src="http://217.160.76.148/map/#world:128:27:-160:296:0:0:0:0:perspective"  width="500" height="200">
-
-  </div>
+        <img src="https://media.tenor.com/nwJFFWwem-QAAAAM/cat-ok.gif" alt="Cat GIF">
+        <embed type="text/html" src="http://217.160.76.148/map/#world:128:27:-160:296:0:0:0:0:perspective" width="500" height="200">
+    </div>
 
 </body>
 </html>
