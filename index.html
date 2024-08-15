@@ -9,6 +9,18 @@
             font-family: 'Comic Sans MS', 'Comic Sans', cursive; /* 90s vibe font */
             color: #0000ff; /* Blue text for high contrast */
             text-align: center;
+            .cursor{
+                position: absolute;
+                pointer-events: none;
+            }
+            .cursor span{
+                position: absolute;
+                min-width: 5px;
+                max-width: 5px;
+                height: 15px;
+                background: linear-gradient(#00d2ff 20%, #ffa6b9 0 40%, white 0 60%, #ffa6b9 0 80%, #00d2ff 0);
+                z-index: 10;
+            }
         }
 
         /* Rainbow text effect */
@@ -22,6 +34,7 @@
             85% { color: violet; }
             100% { color: red; }
         }
+
 
         h1 {
             animation: rainbow 2s infinite; /* Faster animation */
@@ -76,20 +89,42 @@
 </head>
 
 <body>
+<div class="cursor">
 
-    <div class="side-by-side">
-        <h1>TSUKI'S AWESOME WEBSITE OF AWESOME</h1>
-        <img src="https://tenor.com/view/breaking-bad-saul-goodman-trans-saul-transman-gif-24241045.gif" alt="Saul Goodman GIF">
-    </div>
+</div>
+<div class="side-by-side">
+    <h1>TSUKI'S AWESOME WEBSITE OF AWESOME</h1>
+    <img src="https://tenor.com/view/breaking-bad-saul-goodman-trans-saul-transman-gif-24241045.gif" alt="Saul Goodman GIF">
+</div>
 
-    <div class="sus-text">
-        I LOVE DOWNLOADING SUS FILES!!!
-        <a href="https://drive.google.com/uc?export=download&id=1MYdfHYlj_4ImHtJMEdVsaEyMoFAUkQxo">🐝</a>
-    </div>
+<div class="sus-text">
+    I LOVE DOWNLOADING SUS FILES!!!
+    <a href="https://drive.google.com/uc?export=download&id=1MYdfHYlj_4ImHtJMEdVsaEyMoFAUkQxo">🐝</a>
+</div>
 
-    <div>
-        <img src="https://media.tenor.com/nwJFFWwem-QAAAAM/cat-ok.gif" alt="Cat GIF">
-    </div>
+<div>
+    <img src="https://media.tenor.com/nwJFFWwem-QAAAAM/cat-ok.gif" alt="Cat GIF">
+    <embed type="text/html" src="http://217.160.76.148/map/#world:128:27:-160:296:0:0:0:0:perspective" width="500" height="200">
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        let cursor = document.querySelector('.cursor')
+        for (let i = 0; i<7; i++){
+            let span = document.createElement('span')
+            span.style.left = i*5+'px';
+            cursor.appendChild(span)
+        }
+        document.addEventListener('mousemove', e => {
+            gsap.to("span", {
+                x: e.clientX,
+                y: e.clientY,
+                stagger: 0.05
+            })
+        })
+    })
+</script>
 
 </body>
 </html>
